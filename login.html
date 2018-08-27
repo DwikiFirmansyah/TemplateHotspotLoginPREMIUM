@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DWIKI WIFI.ID HOTSPOT</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		
+	</head>
+	<body>
+	
+	<div class="jw-slideshow">
+		$(if chap-id)
+			<form name="sendin" action="$(link-login-only)" method="post">
+				<input type="hidden" name="username" />
+				<input type="hidden" name="password" />
+				<input type="hidden" name="dst" value="$(link-orig)" />
+				<input type="hidden" name="popup" value="true" />
+			</form>
+
+			<script type="text/javascript" src="md5.js"></script>
+			<script type="text/javascript">
+			<!--
+				function doLogin() {
+				document.sendin.username.value = document.login.username.value;
+				document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+				document.sendin.submit();
+				return false;
+				}
+			//-->
+			</script>
+		$(endif)
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="login.html">HOME</a>
+				<a href="about.html">ABOUT</a>
+				<a href="" data-toggle="modal" data-target="#ModalVoucher">VOUCHER </a>				
+				<a href="speedtest.html">TEST SPEED</a>
+				<p class="copy">&copy; 2017 BY DWIKI WIFI.ID HOTSPOT</p>
+			</div>
+		</div>
+		
+		<div class="panel bg">
+			<div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+				<ol class="carousel-indicators">
+				  <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+				  <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+				  <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+				  <div class="active item">
+					<a class="lightbox-image" data-fancybox="gallery" href="img/slide1.png">
+					<img src="img/slide1.png" class="img-responsive" />							
+</a>
+					<blockquote>
+					<h2>Stay Connected</h2>
+					<p>Selalu terhubung dimanapun dan kapanpun, dengan koneksi yang cepat dan stabil.</p>
+					</blockquote>
+				  </div>
+				  <div class="item">
+				  					<a class="lightbox-image" data-fancybox="gallery" href="img/slide2.png">
+					<img src="img/slide2.png" class="img-responsive" />
+					</a>
+					<blockquote>
+					<h2>High Speed Connection</h2>
+					<p>Nikmati kecepatan internet yang stabil hinga 300 Mbps.</p>
+					</blockquote>
+				  </div>
+				  <div class="item">
+				  				  					<a class="lightbox-image" data-fancybox="gallery" href="img/slide3.png">
+
+					<img src="img/slide3.png" class="img-responsive" />
+					</a>
+					<blockquote>
+					<h2>Friendly Service</h2>
+					<p>Pelayanan yang ramah dalam menangani pengguna layanan kami.</p>
+					</blockquote>
+				  </div>
+				</div>
+			</div>
+
+			<span class="menu-open" onclick="openNav()">&#9776;</span>
+			$(if error) <p class="pesan text-danger">$(error)</p> $(endif)
+
+			
+				
+
+				<!-- Tab panes -->
+				<div>
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" id="myTabs">
+					<li class="active"><a href="#home" class="a" aria-controls="home" role="tab" data-toggle="tab">YANG FREE SEDANG MAINTENANCE</a></li>
+					<li><a href="#login" class="b" aria-controls="login" role="tab" data-toggle="tab">LOGIN</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="home">
+						<div class="login">
+							$(if trial == 'yes')
+							<a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)" class=" btn btn-login text-space">LOGIN</a>
+							$(endif)
+							<a href="" data-toggle="modal" data-target="#tutor"class="btn-login text-space">TUTOR LOGIN FREE</a> <br>
+							<br>
+
+							<a href="" data-toggle="modal" data-target="#ModalVoucher"class="btn-login text-space">VOUCHER  INTERNET </a>
+						</div>
+					</div>
+					<div class="tab-pane" id="login">
+						<form class="login" name="login" action="$(link-login-only)" method="post"
+						$(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+						<div class="head-login">
+							<input type="text" name="username" class="username" value="$(username)" placeholder="Username" />
+							<div class="line"></div>
+							<input type="password" name="password" class="password" placeholder="Password" />
+						</div>
+						<button type="submit" class="btn-login text-space">LOGIN</button>
+						
+							<br>
+
+							<a href="" data-toggle="modal" data-target="#ModalVoucher"class="btn-login text-space">VOUCHER  INTERNET </a>
+						</form>
+					</div>
+				</div>
+			</div>
+				
+			
+<br>
+			<p class="text-purple text-center"><small>OR</small><p>
+			<div class="social">
+				<a href="#" class="btn btn-default btn-circle"><i class="fa fa-phone"></i></a>
+				<a href="https://www.facebook.com/dwiki.firmansyah.54943" class="btn btn-default btn-circle"><i class="fa fa-facebook"></i></a>
+				<a href="twitter.com/dwiki_f" class="btn btn-default btn-circle"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/+dwikifirmansyahdwikifirmansyah" class="btn btn-default btn-circle"><i class="fa fa-google"></i></a>
+				<a href="https://www.instagram.com/dwiki_f/" class="btn btn-default btn-circle"><i class="fa fa-instagram"></i></a>
+			</div>
+		</div>
+		<div class="jw-slideshow">
+		</div>
+		<!-- Modal Voucher -->
+	<div class="modal fade " id="ModalVoucher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="myModalLabel"><i class="fa fa fa-credit-card fa-fw"></i> Voucher Dwiki Hotspot</h3>
+				</div>
+				<div class="modal-body">
+					<div class="alert alert-success" role="alert">
+						<i class="fa fa-info-circle fa-2x pull-left fa-border"></i>
+Dengan Dwiki Hotspot Anda bisa berselancar tanpa kuota atau unlimited <br/> dan lebih fleksibel dalam mengelola anggaran biaya internet Anda.
+					</div>
+					<div class="alert alert-success" role="alert">
+						<i class="fa fa-download fa-2x pull-left fa-border"></i>Untuk memudahkan klien dalam memilih paket hotspot internet yang sesuai, kami menyediakan beberapa pilihan Voucher berdasarkan budget dan kebutuhan akses internet anda tanpa batasan kuota.
+
+					</div>
+					<!-- Main Content -->
+					<table class="table table-hover table-bordered" border="0">
+					  <thead>
+						<tr>
+						  <th>#</th>
+						  <th>Price</th>
+						  <th>Details of quotas and speed</th>
+						  <th>Active period</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td>1</td>
+						  <td>Rp. 3.000</td>
+						  <td> 1 user/Speed 325Kbps/500Kbps</td>
+						  <td>Paket 1 Hari</td>
+						</tr>
+						<tr>
+						  <td>2</td>
+						  <td>Rp. 7.000</td>
+						  <td>1 Pengguna Speed 325Kbps/725Kbps</td>
+						  <td>Paket 3 Hari</td>
+						</tr>
+						<tr>
+						  <td>3</td>
+						  <td>Rp. 15.000</td>
+						  <td>1 Pengguna / Speed 500Kbps/1Mbps</td>
+						  <td>Paket 1 Minggu</td>
+						</tr>
+						<tr>
+						  <td>4</td>
+						  <td>Rp. 25.000</td>
+						  <td>2 Pengguna / Speed 500Kbps/1Mbps</td>
+						  <td>Paket 2 Minggu</td>
+						</tr>
+						<tr>
+						  <td>5</td>
+						  <td>Rp. 50.000</td>
+						  <td>3 Pengguna / Speed 1Mbps/1,5Mbps</td>
+						  <td>Paket 1 Bulan</td>
+						</tr>
+<tr>
+						  <td>6</td>
+						  <td>Rp. 100.000</td>
+						  <td>5 Pengguna / Speed 2Mbps/2Mbps</td>
+						  <td>Paket 1 Bulan +++</td>
+						</tr>
+
+					  </tbody>
+					</table>
+					<h4 style="color:#333;"><i class="fa fa-pencil-square-o fa-fw"></i><a href="https://www.facebook.com/dwiki270915"> How to register</h4></a>
+					<ul>
+						<li>Contact us by <i class="fa fa-phone-square fa-fw"></i> or <i class="fa fa-envelope fa-fw"></i>
+						to <code>+62 821 1014 8215</code> <br /> 
+						Format of registration : <strong>INET <code>&lt;spasi&gt;</code> Your package selection <code>&lt;spasi&gt;</code> username</strong>.
+Example : <code>INET Paket 1 Dwiki </code> send to <code>+62 821 1014 8215</code></li>
+						<li>by way of direct came to our office in<code> DWIKI HOTSPOT RT02/RW017</code></li>
+						<li><h3>MENERIMA PEMASANGAN WIFI RUMAHAN,WARUNG,TEMPAT MAKAN DLL,MINAT BISA HUB 082110148215<h3></li>
+					</ul> 
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- tutor -->
+	<div class="modal fade " id="tutor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="myModalLabel"><i class="fa fa fa-credit-card fa-fw"></i> Voucher Dwiki Hotspot</h3>
+				</div>
+				<div class="modal-body">
+					<div class="alert alert-success" role="alert">
+						<i class="fa fa-info-circle fa-2x pull-left fa-border"></i>
+CARA NYA CUKUP MUDAH MENGGUNAKAN LAYANAN KAMI <br/> 
+					</div>
+					<div class="modal-body">
+					<div class="alert alert-success" role="alert">
+						<i class="fa fa-info-circle fa-2x pull-left fa-border"></i>
+TINGGAL KLIK YG BERTULISAN <code>&lt;LOGIN FREE&gt;</code> <br/> 
+					</div>
+					<div class="alert alert-success" role="alert">
+						<i class="fa fa-info-circle fa-2x pull-left fa-border"></i>
+Apabila login page Tidak muncul bisa anda ketik di Browser dengan kta kta di samping ini,Atau di Klik saja   <code>&lt;<a href="http://pandanet.com">pandanet.com</a>&gt;</code> <br/> 
+					</div>
+					
+					<div class="alert alert-success" role="alert">
+						<i class="fa fa-info-circle fa-2x pull-left fa-border"></i>
+PERINGATAN!!! ANDA BISA BERSELANCAR DI PANDANET SLAMA 7 JAM, SETELAH 7 JAM INET AKAN OTOMATIS MATI DAN BISA DI TUNGGU LAGI UNTUK LOGIN 27 MENIT</code> <br/> 
+					</div>
+					
+					
+					
+					 
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- tutor end-->
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.particleground.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="jquery.backstretch.min.js"></script>
+	<script type="text/javascript">
+		$.backstretch(
+		[
+			"background1.jpg",
+			"background2.jpg",
+			"background3.jpg"
+		], 
+		{
+			duration: 1200, 
+			fade: 600
+		});
+		  	document.login.username.focus();
+		  	/* Open */
+			function openNav() {
+			    document.getElementById("myNav").style.height = "100%";
+			}
+
+			/* Close */
+			function closeNav() {
+			    document.getElementById("myNav").style.height = "0%";
+			}
+			$('#myTabs a').click(function (e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
+		</script>
+		<script type="text/javascript">
+    (function () {
+        var options = {
+            facebook: "337238409992273", // Facebook page ID
+            whatsapp: "+6282114206549", // WhatsApp number
+            email: "dwikifirmansyah@hotmail.com", // Email
+            sms: "+6282114206549 ", // Sms phone number
+            call: "+6282114206549 ", // Call phone number
+            company_logo_url: "//karmelblumen.files.wordpress.com/2010/11/carmel-coat-of-arms1.gif", // URL of company logo (png, jpg, gif)
+            greeting_message: "Mau cari Tutorial  apa gan ??", // Text of greeting message
+            call_to_action: "Kirim pesan di sini gan !!!", // Call to action
+            button_color: "#FF6550", // Color of button
+            position: "left", // Position may be 'right' or 'left'
+            order: "facebook,whatsapp" // Order of buttons
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+	</body>
+	
+</html>

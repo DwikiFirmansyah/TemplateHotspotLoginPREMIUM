@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	 <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DWIKI WIFI.ID HOTSPOT</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<script language="JavaScript">
+		<!--
+			function openLogin() {
+			if (window.name != 'hotspot_logout') return true;
+			open('$(link-login)', '_blank', '');
+			window.close();
+			return false;
+			}
+		//-->
+		</script>
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="login.html">HOME</a>
+				<a href="about.html">ABOUT</a>
+				<a href="" data-toggle="modal" data-target="#ModalVoucher">VOUCHER </a>				
+				<a href="speedtest.html">TEST SPEED</a>
+				<p class="copy">&copy; 2017 BY DWIKI WIFI.ID HOTSPOT</p>
+			</div>
+		</div>
+		<div class="panel bg">				
+			<form class="login" action="$(link-login)" name="login" onSubmit="return openLogin()">
+				<img src="img/dwiki.png" class="img-circle img-thumbnail" width="80"/>
+				<p class="user"><span class="name">Thanks $(username)</span></p>
+				<p><small>You have just logged out </br>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </small></p>
+				<div class="head-login">
+					<div class="status">
+						<p>Username : $(username)</p>
+						<div class="line"></div>
+						<p>IP Address : $(ip)</p>
+						<div class="line"></div>
+						<p>MAC Address : $(mac)</p>
+						<div class="line"></div>
+						<p>Session time : $(uptime)</p>
+						<div class="line"></div>
+						$(if session-time-left)
+						<p>Time left : $(session-time-left)</p>
+						<div class="line"></div>
+						$(endif)
+						<p>Bytes up/down : $(bytes-in-nice) / $(bytes-out-nice)</p>
+					</div>
+				</div>
+				<button type="submit" class="btn-login text-space">LOGIN</button>
+				$(endif)
+			</form>
+		</div>
+		</div>
+		<p class="text-purple text-center"><small>OR</small><p>
+			<div class="social">
+				<a href="#" class="btn btn-default btn-circle"><i class="fa fa-phone"></i></a>
+				<a href="https://www.facebook.com/dwiki.firmansyah.54943" class="btn btn-default btn-circle"><i class="fa fa-facebook"></i></a>
+				<a href="twitter.com/dwiki_f" class="btn btn-default btn-circle"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/+dwikifirmansyahdwikifirmansyah" class="btn btn-default btn-circle"><i class="fa fa-google"></i></a>
+				<a href="https://www.instagram.com/dwiki_f/" class="btn btn-default btn-circle"><i class="fa fa-instagram"></i></a>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+
+		  document.login.username.focus();
+		  	/* Open */
+			function openNav() {
+			    document.getElementById("myNav").style.height = "100%";
+			}
+
+			/* Close */
+			function closeNav() {
+			    document.getElementById("myNav").style.height = "0%";
+			}
+			$('#myTabs a').click(function (e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
+	</body>
+</html>

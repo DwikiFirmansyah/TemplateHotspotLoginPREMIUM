@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DWIKI WIFI.ID HOTSPOT</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		$(if refresh-timeout)
+		<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+		$(endif)
+		<script language="JavaScript">
+		<!--
+		$(if advert-pending == 'yes')
+		  var popup = '';
+		  function focusAdvert() {
+		  if (window.focus) popup.focus();
+		}
+		function openAdvert() {
+		  popup = open('$(link-advert)', 'hotspot_advert', '');
+		  setTimeout("focusAdvert()", 1000);
+		}
+		$(endif)
+		  function openLogout() {
+		  if (window.name != 'hotspot_status') return true;
+		  open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+		  window.close();
+		  return false;
+		}
+		//-->
+		</script>
+
+   	</head>
+   	<body bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0"
+   	$(if advert-pending == 'yes')
+   		onLoad="openAdvert()"
+   	$(endif)>
+
+	
+
+		<div class="panel bg">
+			<form  class="login" action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+				$(if login-by == 'trial')
+				<a class="lightbox-image" data-fancybox="gallery" href="img/slide1.png">
+				<img src="img/dwiki.png" class="img-circle img-thumbnail" width="80"/>
+				</a>
+				<p class="user"><span class="name">Free User</span></p>
+				$(elif login-by != 'mac')
+				<a class="lightbox-image" data-fancybox="gallery" href="img/dwiki.png">
+				<img src="img/dwiki.png" class="img-circle img-thumbnail" width="80"/>
+				</a>
+				<p class="user"><span class="name">$(username)</span></p>
+				$(endif)
+				<p><small>You have just login </br>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </small></p>
+				<div class="head-login">
+					<div class="status">
+						<p>IP Address	:	$(ip)</p>
+						<div class="line"></div>
+						<p>MAC Address : $(mac)</p>
+						<div class="line"></div>
+						<p>Bytes up/down	:	$(bytes-in-nice) / $(bytes-out-nice)</p>
+						<div class="line"></div>
+						$(if session-time-left)
+						<p>Connected / Left	:	$(uptime) / $(session-time-left)</p>
+						<div class="line"></div>
+						$(else)
+						<p>Connected	:	$(uptime)</p>
+						<div class="line"></div>
+						$(endif)
+						$(if blocked == 'yes')
+						<p>Status	: advertisement required</p>
+						<div class="line"></div>
+						$(elif refresh-timeout)
+						<p>Status refresh	:	$(refresh-timeout)</p>
+						$(endif)
+						<!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
+						<button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
+						<!-- end of user manager link -->
+					</div>
+				</div>
+
+				<button type="submit" class="btn-login text-space">LOGOUT</button>
+				$(endif)
+			</form>
+		</div>
+		
+		<p class="text-purple text-center"><small>OR</small><p>
+			<div class="social">
+				<a href="#" class="btn btn-default btn-circle"><i class="fa fa-phone"></i></a>
+				<a href="https://www.facebook.com/dwiki.firmansyah.54943" class="btn btn-default btn-circle"><i class="fa fa-facebook"></i></a>
+				<a href="twitter.com/dwiki_f" class="btn btn-default btn-circle"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/+dwikifirmansyahdwikifirmansyah" class="btn btn-default btn-circle"><i class="fa fa-google"></i></a>
+				<a href="https://www.instagram.com/dwiki_f/" class="btn btn-default btn-circle"><i class="fa fa-instagram"></i></a>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+
+		  	document.login.username.focus();
+		  	/* Open */
+			function openNav() {
+			    document.getElementById("myNav").style.height = "100%";
+			}
+
+			/* Close */
+			function closeNav() {
+			    document.getElementById("myNav").style.height = "0%";
+			}
+			$('#myTabs a').click(function (e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
+	</body>
+</html>
